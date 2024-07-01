@@ -16,14 +16,33 @@ int findMissingNumber(int arr[], int size) {
     return totalSum - arraySum;
 }
 
+// Using Binary Search
+int findMissingNum(int arr[],int size){
+    int start = 0, end = size-1, ans = -1;
+    while(start<=end){
+        int mid = start + (end-start)/2;
+        if(arr[mid]-mid == 1){
+            start = mid+1;
+        }
+        else if(arr[mid]-mid == 2){
+            ans = mid;
+            end = mid-1;
+        }
+    }return ans+1;
+}
+
 int main() {
     // Initialize the array with one missing number
-    int arr[] = {1, 2, 3, 4, 6, 7, 8};
+    int arr[] = {1, 3, 4, 5, 6, 7, 8};
     int size = sizeof(arr) / sizeof(arr[0]);
     
     // Find and output the missing number
     int missingNumber = findMissingNumber(arr, size);
     cout << "The missing number is: " << missingNumber << endl;
+
+    // int missingNumber = findMissingNum(arr, size);
+    // cout << "The missing number is: " << missingNumber << endl;
+
 
     return 0;
 }
