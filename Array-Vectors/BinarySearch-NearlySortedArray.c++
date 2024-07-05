@@ -26,7 +26,6 @@ int main(){
     int arr[] = {20,10,30,50,40,70,60};
     int size = sizeof(arr)/sizeof(arr[0]);
     int target = 70;
-<<<<<<< HEAD
     int index = nearlysorted(arr,size,target);
     if(index == -1){
         cout<<"Element not found";
@@ -34,8 +33,5 @@ int main(){
     else{
         cout<<"Element found at index "<<index;
     }
-=======
-    cout<<target<<" found at: "<<nearlysorted(arr,size,target);
->>>>>>> 148128b12cbaf9c86fafb08a15e142f327266e20
     return 0;
 }
