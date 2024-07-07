@@ -21,11 +21,6 @@ vector<int> bubbleSort(vector<int> vec) {
             if(vec[j]>vec[j+1]){
                 swap(vec[j],vec[j+1]);
             }
-
-            // Sort in descending order
-            // if (vec[j] < vec[j + 1]) {
-            //     swap(vec[j], vec[j + 1]);
-            // }
         }
     }
     return vec;
